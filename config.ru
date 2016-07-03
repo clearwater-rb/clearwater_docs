@@ -14,6 +14,7 @@ class ClearwaterDocs < Roda
     <meta charset="utf-8" />
     <title>Clearwater — A Ruby Front-end Framework</title>
     #{assets.stylesheet 'default'}
+    <meta name="viewport" content="initial-scale=1,width=device-width" />
   </head>
   <body>
     #{assets.js 'app'}
