@@ -23,4 +23,5 @@ class ClearwaterDocs < Roda
   end
 end
 
+use Rack::Deflater
 run ClearwaterDocs
