@@ -11,6 +11,7 @@ class ClearwaterDocs < Roda
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <title>Clearwater — Awesome stuff</title>
     #{assets.stylesheet 'default'}
   </head>
