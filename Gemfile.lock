@@ -25,13 +25,6 @@ GIT
       sprockets (~> 3.1)
       tilt (>= 1.4)
 
-PATH
-  remote: ../roda-opal_assets
-  specs:
-    roda-opal_assets (0.1.0)
-      opal (~> 0.9, < 0.12.0)
-      roda
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,6 +37,9 @@ GEM
     rack (2.0.1)
     roda (2.15.0)
       rack
+    roda-opal_assets (0.1.0)
+      opal (~> 0.9, < 0.12.0)
+      roda
     sourcemap (0.1.1)
     sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
@@ -59,7 +55,7 @@ DEPENDENCIES
   opal!
   puma
   roda
-  roda-opal_assets!
+  roda-opal_assets
 
 BUNDLED WITH
    1.12.5
