@@ -12,7 +12,7 @@ class ClearwaterDocs < Roda
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Clearwater — Awesome stuff</title>
+    <title>Clearwater — A Ruby Front-end Framework</title>
     #{assets.stylesheet 'default'}
   </head>
   <body>
