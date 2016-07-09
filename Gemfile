@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'clearwater', github: 'clearwater-rb/clearwater'
-gem 'bowser', github: 'clearwater-rb/bowser'
-gem 'opal', github: 'opal/opal'
+gem 'clearwater', '~> 1.0.0.rc2'
+gem 'opal'
 
 gem 'roda'
 gem 'roda-opal_assets'

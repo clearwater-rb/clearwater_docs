@@ -1,58 +1,41 @@
-GIT
-  remote: git://github.com/clearwater-rb/bowser.git
-  revision: 500c1abf08315000129ed254a92382e53f9c10fa
-  specs:
-    bowser (0.1.6)
-      opal (>= 0.8.0, < 0.11.0)
-
-GIT
-  remote: git://github.com/clearwater-rb/clearwater.git
-  revision: 9c8064e82faf72981efe2f7c12ca8f7f5ad81b72
-  specs:
-    clearwater (1.0.0.rc1)
-      bowser (~> 0.1.5)
-      opal (~> 0.7)
-
-GIT
-  remote: git://github.com/opal/opal.git
-  revision: 59e7a48f5b6d62b26a7f4b3c6d284aee751b2c3b
-  specs:
-    opal (0.11.0.dev)
-      ast (>= 2.3.0)
-      hike (~> 1.2)
-      parser (>= 2.3.1.2)
-      sourcemap (~> 0.1.0)
-      sprockets (~> 3.1)
-      tilt (>= 1.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.3.0)
+    bowser (0.2.0)
+      opal (>= 0.8.0, < 0.11.0)
+    clearwater (1.0.0.rc2)
+      bowser (~> 0.1)
+      opal (~> 0.7)
     concurrent-ruby (1.0.2)
+    execjs (2.7.0)
     hike (1.2.3)
-    parser (2.3.1.2)
-      ast (~> 2.2)
+    opal (0.10.1)
+      hike (~> 1.2)
+      sourcemap (~> 0.1.0)
+      sprockets (~> 3.1)
+      tilt (>= 1.4)
     puma (3.4.0)
     rack (2.0.1)
     roda (2.15.0)
       rack
-    roda-opal_assets (0.1.0)
+    roda-opal_assets (0.2.0)
       opal (~> 0.9, < 0.12.0)
       roda
+      uglifier (~> 3.0)
     sourcemap (0.1.1)
     sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     tilt (2.0.5)
+    uglifier (3.0.0)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bowser!
-  clearwater!
-  opal!
+  clearwater (~> 1.0.0.rc2)
+  opal
   puma
   roda
   roda-opal_assets
