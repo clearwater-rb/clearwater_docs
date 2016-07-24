@@ -35,12 +35,6 @@ class Guides
     def render
       ::Link.new({ href: "/guides/#{@path}", style: Style.link }, @label)
     end
-
-    def style
-      {
-        color: :blue,
-      }
-    end
   end
 
   module Style

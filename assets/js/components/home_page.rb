@@ -6,7 +6,7 @@ class HomePage
   include Clearwater::Component
 
   def render
-    article({ style: Style.page }, [
+    article([
       h2('The best way to write front-end web apps in Ruby'),
       CodeBlock.new(<<-EOC),
 require 'opal'
@@ -62,16 +62,5 @@ end
         other necessary setup.
       EOF
     ])
-  end
-
-  module Style
-    module_function
-
-    def page
-      {
-        width: '1024px',
-        margin: :auto,
-      }
-    end
   end
 end
