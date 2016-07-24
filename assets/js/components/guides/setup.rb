@@ -1,3 +1,4 @@
+require 'clearwater/component'
 require 'components/code_block'
 
 class Guides
@@ -5,7 +6,7 @@ class Guides
     include Clearwater::Component
 
     def render
-      div([
+      article([
         h2('Installation and Setup'),
         p(<<-EOP),
           There are several ways you can compile a Clearwater app, but the
