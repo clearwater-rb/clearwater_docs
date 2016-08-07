@@ -2,9 +2,13 @@ require 'bundler/setup'
 Bundler.require
 
 class ClearwaterDocs < Roda
+  plugin :public
+
   assets = Roda::OpalAssets.new
 
   route do |r|
+    r.public
+
     assets.route r
 
     <<-HTML
