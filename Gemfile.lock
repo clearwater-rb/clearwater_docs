@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/clearwater-rb/clearmarked.git
+  remote: https://github.com/clearwater-rb/clearmarked.git
   revision: 442d54edfef6d49b7597afff7aa9137533ea5db3
   specs:
     clearmarked (0.1.0)
