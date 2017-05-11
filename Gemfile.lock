@@ -5,8 +5,9 @@ GIT
     clearmarked (0.1.0)
       clearwater
 
-PATH
-  remote: ../clearwater-hot_loader
+GIT
+  remote: https://github.com/clearwater-rb/clearwater-hot_loader.git
+  revision: 1b7ce96697f31a1bc9d29dda0ce8f37290e97201
   specs:
     clearwater-hot_loader (0.2.0)
       clearwater (~> 1.0.0.rc1)
