@@ -5,7 +5,17 @@ class API
     include Clearwater::Component
 
     def render
-      h1 'VirtualDOM'
+      div([
+        h1('VirtualDOM'),
+        p([
+          'Not yet written. Feel free to submit a pull request to the ',
+          a({
+            href: 'https://github.com/clearwater-rb/clearwater_docs',
+            target: :_blank,
+          }, 'documentation repo'),
+          '.',
+        ]),
+      ])
     end
   end
 end

@@ -16,6 +16,10 @@ class CodeBlock
     pre({ style: Style.pre }, code({ class_name: @lang }, @code))
   end
 
+  def key
+    @code
+  end
+
   def mount node
     `hljs.highlightBlock(#{node.to_n}.children[0])`
   end

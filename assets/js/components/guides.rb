@@ -9,7 +9,6 @@ class Guides
         h1('Guides'),
         nav({ style: Style.nav }, [
           # These are Guides::Links, not plain Clearwater Links
-          # TODO: Create these guides
           Link.new('Installation/Setup', 'setup'),
           Link.new('Rendering', 'rendering'),
           Link.new('Handling Events', 'events'),
@@ -21,7 +20,7 @@ class Guides
   end
 
   def default_content
-    p('Choose a guide')
+    Setup.new
   end
 
   class Link

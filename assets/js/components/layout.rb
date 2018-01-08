@@ -15,6 +15,13 @@ class Layout
       ]),
 
       outlet || HomePage.new,
+
+      footer({ style: Style.footer }, [
+        p([
+          "Clearwater and related gems were created by ",
+          a({ href: 'https://twitter.com/jamie_gaskins' }, 'Jamie Gaskins'),
+        ]),
+      ]),
     ])
   end
 
@@ -23,8 +30,14 @@ class Layout
 
     def app
       {
-        width: '1024px',
+        max_width: '1024px',
         margin: :auto,
+      }
+    end
+
+    def footer
+      {
+        text_align: :center,
       }
     end
   end

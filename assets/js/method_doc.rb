@@ -5,11 +5,12 @@ class MethodDoc
 
   attr_reader :name, :description, :arguments, :return_value
 
-  def initialize(name:, description: '', arguments: {}, return_value: nil)
+  def initialize(name:, description: '', arguments: {}, return_value: nil, example: nil)
     @name = name
     @description = description
     @arguments = arguments
     @return_value = return_value
+    @example = example
   end
 
   def render
@@ -18,27 +19,26 @@ class MethodDoc
       div(@description),
       unless @arguments.empty?
         [
-          # h5({ id: "#{id}-arguments"}, 'Arguments'),
           dl(@arguments.map { |name, description|
             [
-              dt({ style: { font_weight: :bold } }, name),
+              dt({ style: { font_weight: :bold } }, code(name)),
               dd(description),
             ]
           }),
-          # table([
-          #   tbody(@arguments.map { |name, description|
-          #     tr([
-          #       th(name),
-          #       td(description),
-          #     ])
-          #   }),
-          # ]),
         ]
       end,
+
       if @return_value
         div([
           strong('Returns: '),
           @return_value,
+        ])
+      end,
+
+      if @example
+        div({ id: "method-#{name}-example", class_name: 'method-example' }, [
+          p(strong('Example')),
+          @example,
         ])
       end,
     ])

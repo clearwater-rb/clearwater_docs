@@ -7,7 +7,11 @@ class API
     def render
       ClassDoc.new(
         name: 'Clearwater::BlackBoxNode',
-        description: 'A mixin that signifies that your component is not managed by Clearwater, but is a black box that is only told that it is being mounted, updated, or unmounted.',
+        description: span([
+          'A mixin that signifies that your component is not managed by Clearwater, but is a black box that is only told that it is being mounted, updated, or unmounted. It is not loaded by default, so you must ',
+          code("require 'clearwater/black_box_node'"),
+          ' in order to use this mixin.',
+        ]),
         example: Example.new,
         methods: [
           MethodDoc.new(
@@ -67,14 +71,13 @@ class API
         ],
       )
     end
-  end
 
-  class Example
-    include Clearwater::Component
-    include Clearwater::BlackBoxNode
+    class Example
+      include Clearwater::Component
+      include Clearwater::BlackBoxNode
 
-    def node
-      pre(code(<<-CODE))
+      def node
+        pre(code(<<-CODE))
 class Map
   include Clearwater::BlackBoxNode
 
@@ -124,11 +127,12 @@ class Map
     # We don't need to do anything here. Google maps clean up after themselves.
   end
 end
-      CODE
-    end
+        CODE
+      end
 
-    def mount(element)
-      `hljs.highlightBlock(#{element.to_n})`
+      def mount(element)
+        `hljs.highlightBlock(#{element.to_n})`
+      end
     end
   end
 end
