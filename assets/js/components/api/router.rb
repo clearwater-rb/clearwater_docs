@@ -37,7 +37,10 @@ class API
                 code('back'),
                 ' which will pop the last URL off of the navigation history.',
               ]),
-              block: 'the declaration of the routing tree',
+              block: span([
+                'the declaration for ',
+                Link.new({ href: '/guides/routing' }, 'the routing tree'),
+              ]),
             },
           ),
           MethodDoc.new(

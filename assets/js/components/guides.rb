@@ -11,6 +11,7 @@ class Guides
           # These are Guides::Links, not plain Clearwater Links
           Link.new('Installation/Setup', 'setup'),
           Link.new('Rendering', 'rendering'),
+          Link.new('Routing', 'routing'),
           Link.new('Handling Events', 'events'),
         ]),
       ]),

@@ -4,6 +4,7 @@ require 'clearwater'
 require 'components/guides'
 require 'components/guides/setup'
 require 'components/guides/rendering'
+require 'components/guides/routing'
 require 'components/guides/event_handling'
 require 'components/layout'
 require 'components/api'
@@ -22,6 +23,7 @@ router = Clearwater::Router.new do
   route 'guides' => Guides.new do
     route 'setup' => Guides::Setup.new
     route 'rendering' => Guides::Rendering.new
+    route 'routing' => Guides::Routing.new
     route 'events' => Guides::EventHandling.new
   end
 
