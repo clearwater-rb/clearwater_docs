@@ -13,7 +13,11 @@ class NavLink
   end
 
   def render
-    Link.new(@properties, @content)
+    if @properties[:href].to_s.include? '://'
+      a(@properties, @content)
+    else
+      Link.new(@properties, @content)
+    end
   end
 
   def defaults_with properties

@@ -12,6 +12,7 @@ class Layout
       nav([
         NavLink.new('Guides', '/guides'),
         NavLink.new('API Reference', '/api'),
+        NavLink.new('GitHub Repo', 'https://github.com/clearwater-rb/clearwater'),
       ]),
 
       outlet || HomePage.new,
