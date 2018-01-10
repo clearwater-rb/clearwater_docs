@@ -30,8 +30,11 @@ class Layout
 
     def app
       {
+        background: :white,
         max_width: '1024px',
         margin: :auto,
+        padding: '1em 2em',
+        min_height: '100vh',
       }
     end
 
