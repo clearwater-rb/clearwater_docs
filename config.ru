@@ -2,7 +2,12 @@ require 'bundler/setup'
 Bundler.require
 
 class ClearwaterDocs < Roda
-  plugin :public
+  entry_point_expiration = 60 * 60 * 24 # cache entry points for a day
+  static_expiration = entry_point_expiration * 365 # cache static assets for longer
+
+  plugin :public, headers: {
+    'Cache-Control' => "public, max-age=#{static_expiration}"
+  }
 
   assets = Roda::OpalAssets.new
 
@@ -11,6 +16,7 @@ class ClearwaterDocs < Roda
 
     assets.route r
 
+    response.headers['Cache-Control'] = "public, max-age=#{entry_point_expiration}"
     <<-HTML
 <!DOCTYPE html>
 <html>
