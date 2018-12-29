@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 
-ruby '2.4.2'
+ruby '2.6.0'
 
-gem 'clearwater', '~> 1.0.0.rc2'
+gem 'clearwater'
 gem 'opal'
 gem 'clearwater-hot_loader'
 gem 'clearmarked'
 gem 'bowser'
 
 gem 'roda'
-gem 'roda-opal_assets'
+gem 'roda-opal_assets', '>= 0.3.1'
 gem 'puma'
 gem 'rake'
 
